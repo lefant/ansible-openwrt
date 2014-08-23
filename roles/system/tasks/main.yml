@@ -1,0 +1,5 @@
+---
+- name: set hostname
+  uci: command=set key="system.@system[0].hostname" value="{{ hostname }}"
+  notify: uci commit
+

@@ -1,0 +1,20 @@
+---
+#TODO: refactor to use a loop over variables somehow
+- name: set sqm enabled
+  uci: command=set key="sqm.{{ sqm_device }}.enabled" value="{{ sqm_enabled }}"
+  notify: uci commit
+
+- name: set sqm download
+  uci: command=set key="sqm.{{ sqm_device }}.download" value="{{ sqm_download_kbit_per_sec }}"
+  notify: uci commit
+
+- name: set sqm upload
+  uci: command=set key="sqm.{{ sqm_device }}.upload" value="{{ sqm_upload_kbit_per_sec }}"
+  notify: uci commit
+
+- name: enable other sqm keys
+  uci: command=set key="sqm.{{ sqm_device }}.{{ item }}" value="1"
+  notify: uci commit
+  with_items:
+    - squash_dscp
+    - squash_ingress

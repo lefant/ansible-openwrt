@@ -1,0 +1,9 @@
+---
+- name: configure an openwrt system
+  hosts: openwrt
+  user: root
+  gather_facts: no
+  roles:
+    - system
+    - sqm
+    - dnsmasq

@@ -1,0 +1,5 @@
+---
+sqm_enabled: 0
+sqm_device: ge00
+sqm_download_kbit_per_sec: 20000
+sqm_upload_kbit_per_sec: 2000
