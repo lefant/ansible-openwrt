@@ -13,6 +13,13 @@ and run commit at the end if anything changed. i am trying to at least
 build a superset of the [config-cerowrt.sh] shell script plus whatever
 i will need myself.
 
+be careful with blindly running it, if you connect to your openwrt via
+wifi and you change network settings you may lock yourself out.
+
+
+see host_vars/example-gw.home.lan for how to override the role
+defaults in your local clone.
+
 
 TODO
 ====
