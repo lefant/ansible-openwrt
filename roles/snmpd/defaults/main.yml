@@ -1,0 +1,5 @@
+---
+snmpd:
+  sysLocation: 'office'
+  sysContact: 'bofh@example.com'
+  sysName: 'HeartOfGold'

@@ -1,0 +1,8 @@
+---
+- name: apply snmpd uci settings
+  uci: command=set key="snmpd.@system[0].{{ item.key }}" value="{{ item.value }}"
+  with_dict:
+    snmpd
+  notify:
+    - uci commit
+    - restart snmpd
