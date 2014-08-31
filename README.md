@@ -24,6 +24,6 @@ defaults in your local clone.
 TODO
 ====
 - port official opkg module to shellscript or raw
-
+- how to manage /etc/dropbear_authorized_keys? port file to sh?
 
 [config-cerowrt.sh]: https://github.com/richb-hanover/CeroWrtScripts/blob/master/config-cerowrt.sh
