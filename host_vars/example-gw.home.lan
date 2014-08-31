@@ -1,6 +1,12 @@
 ---
 hostname: CEROwrt
 
+sqm:
+  settings:
+    enabled: 1
+    download: 80000
+    upload: 13000
+
 wireless:
   - key: ssid
     value: myssid
@@ -16,13 +22,28 @@ wireless:
     ifaces: [4]
   - key: encryption
     value: psk2
-    ifaces: [0,1,3,4]
+    ifaces: [0,3,4]
   - key: key
     value: mysecret
-    ifaces: [0,1,3,4]
+    ifaces: [0,3,4]
 
-sqm:
-  settings:
-    enabled: 1
-    download: 80000
-    upload: 13000
+firewall:
+  redirect:
+    - index: 0
+      settings:
+        - key: target
+          value: DNAT
+        - key: src
+          value: wan
+        - key: dest
+          value: lan
+        - key: proto
+          value: tcp
+        - key: src_dport
+          value: 22
+        - key: dest_ip
+          value: 172.30.42.16
+        - key: dest_port
+          value: 22
+        - key: name
+          value: ssh_lanbox
