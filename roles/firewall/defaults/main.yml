@@ -1,0 +1,33 @@
+---
+firewall:
+  # zone 0 is wan
+  # zone 1 is lan
+  # zone 2 is guest
+  policies:
+    - chain: output
+      policy: ACCEPT
+      zone: [0,1,2]
+
+    - chain: input
+      policy: ACCEPT
+      zone: [1]
+    - chain: input
+      policy: REJECT
+      zone: [0,2]
+
+    - chain: forward
+      policy: ACCEPT
+      zone: [1]
+    - chain: forward
+      policy: REJECT
+      zone: [0,2]
+
+  forwarding:
+    - index: 0
+      settings:
+      - key: src
+        value: guest
+      - key: dest
+        value: wan
+
+  redirect: []

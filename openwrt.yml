@@ -6,5 +6,6 @@
   roles:
     - system
     - wireless
+    - firewall
     - sqm
     - dnsmasq
