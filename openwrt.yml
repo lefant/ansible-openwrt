@@ -4,7 +4,7 @@
   user: root
   gather_facts: no
   roles:
-    - system
+    - lefant.openwrt-system
     - wireless
     - firewall
     - sqm

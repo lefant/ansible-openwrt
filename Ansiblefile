@@ -4,3 +4,4 @@
 site "https://galaxy.ansible.com/api/v1"
 
 role "lefant.openwrt-uci"
+role "lefant.openwrt-system"
