@@ -1,0 +1,10 @@
+GIT
+  remote: https://github.com/lefant/ansible-openwrt-uci
+  ref: master
+  sha: 4831e18add2bf9be683ea229339caaebf6d25811
+  specs:
+    lefant.openwrt-uci (0.0.0)
+
+DEPENDENCIES
+  lefant.openwrt-uci (>= 0)
+
