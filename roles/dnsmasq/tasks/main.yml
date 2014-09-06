@@ -1,9 +1,0 @@
----
-- name: add per domain server forwards
-  uci: command=add_list key="dhcp.@dnsmasq[0].server" value="/{{ item.0.domain }}/{{ item.1 }}"
-  notify:
-    - uci commit
-    - reload dnsmasq
-  with_subelements:
-    - dnsmasq.server
-    - servers

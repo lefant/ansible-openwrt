@@ -1,9 +1,0 @@
----
-- name: apply wireless uci settings
-  uci: command=set key="wireless.@wifi-iface[{{ item.1 }}].{{ item.0.key }}" value="{{ item.0.value }}"
-  with_subelements:
-    - wireless
-    - ifaces
-  notify:
-    - uci commit
-    - reload network

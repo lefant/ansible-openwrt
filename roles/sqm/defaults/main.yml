@@ -1,7 +1,0 @@
----
-sqm:
-  device: ge00
-  settings:
-    enabled: 0
-    download: 20000
-    upload: 2000
