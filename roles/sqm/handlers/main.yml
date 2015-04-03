@@ -1,3 +1,0 @@
----
-- name: reload sqm
-  raw: /etc/init.d/sqm reload

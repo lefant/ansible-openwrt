@@ -1,3 +1,0 @@
----
-- name: reload dnsmasq
-  raw: /etc/init.d/dnsmasq reload

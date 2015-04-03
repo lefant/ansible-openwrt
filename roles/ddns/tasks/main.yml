@@ -1,8 +1,0 @@
----
-- name: apply ddns uci settings
-  uci: command=set key="ddns.myddns.{{ item.key }}" value="{{ item.value }}"
-  with_dict:
-    ddns
-  notify:
-    - uci commit
-    - restart ddns

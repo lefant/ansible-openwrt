@@ -1,3 +1,0 @@
----
-- name: reload network
-  raw: /etc/init.d/network reload
