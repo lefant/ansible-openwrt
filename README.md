@@ -34,6 +34,10 @@ to automatically retrieve dependencies:
     librarian-ansible install
 
 
+WARNING: as of April 2015 something is broken with the latest ansible
+release for me. if I use v1.7.2 everything works.
+
+
 TODO
 ----
 - port official opkg module to shellscript or raw
