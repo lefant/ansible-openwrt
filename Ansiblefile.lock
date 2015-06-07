@@ -29,14 +29,14 @@ GIT
 GIT
   remote: https://github.com/lefant/ansible-openwrt-system
   ref: master
-  sha: 33d347e3a5449fa14ae1cdabd2ed6cabe5d881a1
+  sha: 0f1056bd097e0e7f52c1245254f76de2e656d72d
   specs:
     lefant.openwrt-system (0.0.0)
 
 GIT
   remote: https://github.com/lefant/ansible-openwrt-uci
   ref: master
-  sha: 4831e18add2bf9be683ea229339caaebf6d25811
+  sha: 3675da1726bfa39faa06d06e655606d3982aa15d
   specs:
     lefant.openwrt-uci (0.0.0)
 

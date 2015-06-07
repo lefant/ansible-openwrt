@@ -1,35 +1,36 @@
 ansible-openwrt
 ===============
 
-configure your [openwrt] system (and variants, cerowrt in my case) using
+Configure your [openwrt] system (and variants, cerowrt in my case) using
 [ansible].
 
-works with the official raw module und some custom modules to avoid
+Works with the official raw module und some custom modules to avoid
 having to run python on the target - no extra dependencies for your
 embedded target system.
 
-currently under development. i have a way to set uci values if needed
-and run commit at the end if anything changed. i am trying to at least
+Currently under development. I have a way to set uci values if needed
+and run commit at the end if anything changed. I am trying to at least
 build a superset of the [config-cerowrt.sh] shell script plus whatever
 i will need myself.
 
-be careful with blindly running it, if you connect to your openwrt via
+Be careful with blindly running it, if you connect to your openwrt via
 wifi and you change network settings you may lock yourself out.
 
-
-see `host_vars/example-gw.home.lan` for how to override the role
+See `host_vars/example-gw.home.lan` for how to override the role
 defaults in your local clone.
 
 
-ansible-galaxy and librarian
+Installation (ansible-galaxy and librarian)
 ----------------------------
 
-in an attempt to make this more reusable i am trying to move all the
+In an attempt to make this more reusable, I am trying to move all the
 roles to [ansible galaxy] and use [librarian-ansible] to manage
-dependencies.
+dependencies. librarian-ansible uses the `Ansiblefile` to declare the
+external playbooks that ansible-openwrt requires.
 
-to automatically retrieve dependencies:
+To automatically retrieve dependencies:
 
+    cd ansible-openwrt
     gem install librarian-ansible
     librarian-ansible install
 
