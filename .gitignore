@@ -1,3 +1,4 @@
 host_vars/gw.home.lan
 librarian_roles
 tmp
+Ansiblefile.lock
