@@ -1,0 +1,20 @@
+---
+# tasks file for openwrt-network
+- name: apply network uci settings
+  uci: command=set key="network.{{ item.1 }}.{{ item.0.key }}" value="{{ item.0.value }}"
+  with_subelements:
+    - network
+    - ifaces
+  notify:
+    - uci commit
+    - restart network
+
+- name: apply dhcp uci settings
+  uci: command=set key="dhcp.{{ item.1 }}.{{ item.0.key }}" value="{{ item.0.value }}"
+  with_subelements:
+    - dhcp
+    - ifaces
+  notify:
+    - uci commit
+    - restart dhcp
+

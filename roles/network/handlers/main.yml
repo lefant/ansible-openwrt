@@ -1,0 +1,14 @@
+---
+# handlers file for openwrt-network
+- name: reload network
+  raw: /etc/init.d/network reload
+
+- name: restart network
+  raw: /etc/init.d/network restart
+
+- name: reload dhcp
+  raw: /etc/init.d/dnsmasq reload
+
+- name: restart dhcp
+  raw: /etc/init.d/dnsmasq restart
+
