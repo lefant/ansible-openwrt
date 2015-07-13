@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Jan Wagner
+  description: configure logging aspects of your openwrt system.
+  license: BSD
+  min_ansible_version: 1.7
+  platforms: []
+  # - Openwrt
+  #   versions:
+  #   - 14.07
+  categories:
+    - system
+dependencies:
+  - { role: lefant.openwrt-uci }

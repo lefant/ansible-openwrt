@@ -1,0 +1,10 @@
+---
+# tasks file for openwrt-logging
+- name: set system logging parameters
+  uci: command=set key="system.@system[0].{{ item.key }}" value="{{ item.value }}"
+  with_dict:
+    system
+  when: (item.key | match("log_.*") or item.key | match(".*loglevel") or item.key == "buffersize") and item.value is defined
+  notify:
+    - uci commit
+    - reload log

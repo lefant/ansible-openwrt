@@ -1,0 +1,4 @@
+---
+# handlers file for openwrt-logging
+- name: reload log
+  raw: /etc/init.d/log reload
