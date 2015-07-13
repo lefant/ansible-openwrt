@@ -1,4 +1,10 @@
 ---
+- name: update opkg chache
+  raw: '[ "$(ls -A /var/opkg-lists/)" ] || opkg update'
+
+- name: install snmpd package
+  raw: opkg install snmpd
+
 - name: apply snmpd uci settings
   uci: command=set key="snmpd.@system[0].{{ item.key }}" value="{{ item.value }}"
   with_dict:
