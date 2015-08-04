@@ -38,7 +38,7 @@ To automatically retrieve dependencies:
 Contributors
 ------------
 
-Jan Wagner ([waha on github] pointed out that the uci module needs to
+Jan Wagner ([waja on github] pointed out that the uci module needs to
 return json and contributed related fixes allowing it to work with
 recent versions of ansible.
 
@@ -53,4 +53,4 @@ TODO
 [config-cerowrt.sh]: https://github.com/richb-hanover/CeroWrtScripts/blob/master/config-cerowrt.sh
 [ansible galaxy]: https://galaxy.ansible.com/list#/users/3407
 [librarian-ansible]: https://github.com/bcoe/librarian-ansible
-[waha on github]: https://github.com/waja
+[waja on github]: https://github.com/waja
