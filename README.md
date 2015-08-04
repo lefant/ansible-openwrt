@@ -21,7 +21,7 @@ defaults in your local clone.
 
 
 Installation (ansible-galaxy and librarian)
-----------------------------
+-------------------------------------------
 
 In an attempt to make this more reusable, I am trying to move all the
 roles to [ansible galaxy] and use [librarian-ansible] to manage
@@ -35,8 +35,12 @@ To automatically retrieve dependencies:
     librarian-ansible install
 
 
-WARNING: as of April 2015 something is broken with the latest ansible
-release for me. if I use v1.7.2 everything works.
+Contributors
+------------
+
+Jan Wagner ([waha on github] pointed out that the uci module needs to
+return json and contributed related fixes allowing it to work with
+recent versions of ansible.
 
 
 TODO
@@ -49,3 +53,4 @@ TODO
 [config-cerowrt.sh]: https://github.com/richb-hanover/CeroWrtScripts/blob/master/config-cerowrt.sh
 [ansible galaxy]: https://galaxy.ansible.com/list#/users/3407
 [librarian-ansible]: https://github.com/bcoe/librarian-ansible
+[waha on github]: https://github.com/waja
