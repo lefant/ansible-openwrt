@@ -1,5 +1,7 @@
 ---
-hostname: CEROwrt
+system:
+  hostname: OpenWRT
+  timezone: UTC
 
 sqm:
   settings:
