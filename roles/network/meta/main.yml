@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Jan Wagner
+  description: network config of your openwrt system.
+  license: BSD
+  min_ansible_version: 1.7
+  platforms: []
+  # - Openwrt
+  #   versions:
+  #   - 14.07
+  categories:
+    - system
+    - network
+dependencies:
+  - { role: lefant.openwrt-uci }

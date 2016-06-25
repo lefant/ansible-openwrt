@@ -1,0 +1,20 @@
+---
+# defaults file for openwrt-network
+network:
+  - key: ipaddr
+    value: 192.168.1.1
+    ifaces: [lan]
+  - key: netmask
+    value: 255.255.255.0
+    ifaces: [lan]
+  - key: gateway
+    value: ""
+    ifaces: [lan]
+  - key: dns
+    value: ""
+    ifaces: [lan]
+
+dhcp:
+  - key: ignore
+    value: ""
+    ifaces: [lan]
