@@ -1,0 +1,5 @@
+---
+# defaults file for openwrt-logging
+system:
+  log_ip: []
+  conloglevel: []
